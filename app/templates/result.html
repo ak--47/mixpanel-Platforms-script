@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RESULTS</title>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+    
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Results
+				</h2>
+				<p>
+					Here are the results*<br/>
+				</p>
+				<p>
+					(Mixpanel libraries sent to this project):
+					<span id="results"><br>{{ livePlatforms }}</span>
+				</p>
+				<p><br><br>
+					<span>Want to try again?</span>
+				</p>
+				
+				
+				<!--<input type="apiKey" class="form-control" id="key" placeholder="API Key"><br>  
+
+				<input type="apiSecret" class="form-control" id="secret" placeholder="Secret"></p> -->
+				<p>
+					<button class="btnAK" onClick="history.go(-1);return true;">Try again!</button>
+
+
+			</div>
+		<p id="afternote">*These results only take into consideration the last 500 events sent to this project</p>
+		</div>
+	</div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>

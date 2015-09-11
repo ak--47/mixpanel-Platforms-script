@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AK's Live Platform Tool</title>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+    
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					<i>What</i> Platform?
+				</h2>
+				<p>
+					This tool is design to make it easier for you to see what platforms are sending data to different mixpanel projects.
+				</p>
+				<p>
+					<span>This tool is intended for <strong><span style="color:red;">internal</span></strong> use only.</span>
+				</p>
+				<p>
+					<span>Give me an <b>API Key</b> and a <b>Secret</b>, and I'll hunt through the last 500 events for a project.</span>
+				</p>
+				<p>
+				<form action="makerequest" method="post" name="KeyAndSecret">
+				
+				{{ form.hidden_tag() }}
+
+
+				{{ form.api_key(size=80, class_='form-control') }}
+<br/><br/>
+				{{ form.api_secret(size=80, class_='form-control') }}
+				</p>
+
+				<!--<input type="apiKey" class="form-control" id="key" placeholder="API Key"><br>  
+
+				<input type="apiSecret" class="form-control" id="secret" placeholder="Secret"></p> -->
+				<p>
+					<a href="#"><button type="submit" class="btnAK">Go fetch!</button></a>
+				</form>
+				</p>
+			</div>
+		<p>This tool authored by {{ author.nickname }}</p>
+		</div>
+	</div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>
