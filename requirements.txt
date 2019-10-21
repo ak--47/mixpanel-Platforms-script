@@ -87,7 +87,7 @@ Twisted==13.2.0
 url==0.1.4
 urllib3==1.11
 virtualenv==13.0.3
-Werkzeug==0.10.4
+Werkzeug==0.15.3
 Whoosh==2.7.0
 WTForms==2.0.2
 xattr==0.6.4
