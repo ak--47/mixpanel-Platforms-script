@@ -6,7 +6,7 @@ blockspring==0.1.13
 bonjour-py==0.3
 coverage==3.7.1
 decorator==4.0.2
-Django==1.5.12
+Django==1.11.29
 django-markdown-deux==1.0.5
 eventlet==0.17.4
 Flask==0.10.1
